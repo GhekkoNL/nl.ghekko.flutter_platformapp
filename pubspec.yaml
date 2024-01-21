@@ -1,0 +1,73 @@
+name: flutter_platformapp
+description: One App to support all Platforms with a Single file screen Adjustment on all Platforms.
+homepage: https://ghekko.nl
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+# Dependencies updated on 01 jan 2024
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Platforms
+  cupertino_icons: ^1.0.6
+  window_manager: ^0.3.7
+  universal_platform: ^1.0.0+1
+  macos_ui: ^2.0.2
+  macos_window_utils: ^1.4.0
+  desktop_window: ^0.4.0
+  fluent_ui: ^4.8.5
+  system_theme: ^2.3.1
+  flutter_acrylic: ^1.1.3
+
+  # Tools
+  get: ^4.6.6
+  gap: ^3.0.1
+  provider: ^6.1.1
+  cached_network_image: ^3.3.1
+
+  # Internet Access
+  url_launcher: ^6.2.3
+
+  # Responsive / Adaptive
+  responsive: ^0.3.11+11
+  responsive_sizer: ^3.2.0
+
+  # Design
+  google_fonts: ^6.1.0
+  font_awesome_flutter: ^10.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: Bungee
+      fonts:
+        - asset: assets/fonts/Bungee/Bungee-Regular.ttf
+        - asset: assets/fonts/Bungee/Bungee-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/Bungee/Bungee-Regular.ttf
+          weight: 600
+        - asset: assets/fonts/Bungee/Bungee-Regular.ttf
+          weight: 700
+    - family: Electric Toaster
+      fonts:
+        - asset: assets/fonts/Electric/electric.ttf
+        - asset: assets/fonts/Electric/electric.ttf
+          weight: 500
+        - asset: assets/fonts/Electric/electric.ttf
+          weight: 600
+        - asset: assets/fonts/Electric/electric.ttf
+          weight: 700
