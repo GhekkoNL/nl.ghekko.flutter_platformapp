@@ -15,6 +15,6 @@ class IOSScreen4 extends StatelessWidget {
     return const CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
             leading: Column(children: [Gap(10), AppBarTitle()])),
-        child: Column(children: [AppScreen4(), SizedBox(height: 85,)]));
+        child: AppScreen4());
   }
 }

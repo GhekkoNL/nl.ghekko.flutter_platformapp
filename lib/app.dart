@@ -66,9 +66,8 @@ class AppStarterState extends State<AppStarter> {
           SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarIconBrightness: Brightness.dark,
-            statusBarBrightness: !OS.web && OS.droid
-                ? Brightness.dark
-                : Brightness.light,
+            statusBarBrightness:
+                !OS.web && OS.droid ? Brightness.dark : Brightness.light,
             systemNavigationBarColor: Colors.white,
             systemNavigationBarDividerColor: Colors.transparent,
             systemNavigationBarIconBrightness: Brightness.dark,
@@ -90,9 +89,8 @@ class AppStarterState extends State<AppStarter> {
           SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarIconBrightness: Brightness.dark,
-            statusBarBrightness: !OS.web && OS.droid
-                ? Brightness.dark
-                : Brightness.light,
+            statusBarBrightness:
+                !OS.web && OS.droid ? Brightness.dark : Brightness.light,
             systemNavigationBarColor: Colors.white,
             systemNavigationBarDividerColor: Colors.transparent,
             systemNavigationBarIconBrightness: Brightness.dark,
@@ -108,13 +106,25 @@ class AppStarterState extends State<AppStarter> {
             create: (_) => MacAppTheme(),
             builder: (context, _) {
               final appTheme = context.watch<MacAppTheme>();
-              return MacosApp(
-                  title: widget.title,
-                  debugShowCheckedModeBanner: false,
-                  theme: MacosThemeData.light(),
-                  darkTheme: MacosThemeData.dark(),
-                  themeMode: appTheme.mode,
-                  home: MacApp(title: widget.title));
+              return ResponsiveSizer(
+                  builder: (context, orientation, screenType) {
+                SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                  statusBarColor: Colors.transparent,
+                  statusBarIconBrightness: Brightness.dark,
+                  statusBarBrightness:
+                      !OS.web && OS.droid ? Brightness.dark : Brightness.light,
+                  systemNavigationBarColor: Colors.white,
+                  systemNavigationBarDividerColor: Colors.transparent,
+                  systemNavigationBarIconBrightness: Brightness.dark,
+                ));
+                return MacosApp(
+                    title: widget.title,
+                    debugShowCheckedModeBanner: false,
+                    theme: MacosThemeData.light(),
+                    darkTheme: MacosThemeData.dark(),
+                    themeMode: appTheme.mode,
+                    home: MacApp(title: widget.title));
+              });
             });
       } else {
         return const Center(child: CircularProgressIndicator());

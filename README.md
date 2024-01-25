@@ -14,8 +14,7 @@ Custom Container Styles
 - Dart Version: 3.2.5
 - Gradle Version: 7.4.2
 - Kotlin Version: 1.9.22
-- Firebase Version: 10.18.0
-- Android Studio Hedgehog | 2023.1.1 Patch 1
+- Android Studio Hedgehog | 2023.1.1 Patch 2
 - Apple Xcode 15
 - CocoaPods 1.14.3
 - Microsoft Visual Studio Community 2022 (64-bit) - Current Version 17.8.3
