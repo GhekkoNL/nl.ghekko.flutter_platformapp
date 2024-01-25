@@ -10,7 +10,7 @@ import '../../../constants/os_type.dart';
 import '../../../constants/screen_size.dart';
 import '../../../theme/design_elements.dart';
 import '../app_screen1/components/buttons.dart';
-import '../app_screen1/components/main_container_card2.dart';
+import 'components/typography.dart';
 
 class AppScreen4 extends StatelessWidget {
   const AppScreen4({super.key});
@@ -47,9 +47,9 @@ class Screen4Content extends StatelessWidget {
                     MainContainerCard1(),
                   ]),
               const MainContainerCard(
-                  label: 'Main Container Card 2',
+                  label: 'Typography Style',
                   children: <Widget>[
-                    MainContainerCard2(),
+                    TypographyStyle(),
                   ]),
 
               /// Single Row view / Phone view
